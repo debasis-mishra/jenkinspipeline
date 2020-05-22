@@ -1,0 +1,1 @@
+echo quality file %date% : %time%

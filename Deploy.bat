@@ -1,0 +1,1 @@
+echo deploy file %date% : %time%

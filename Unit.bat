@@ -1,0 +1,1 @@
+echo junit file %date% : %time%
