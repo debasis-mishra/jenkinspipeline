@@ -18,5 +18,10 @@ pipeline {
           echo "deploying the application..."
         }
       }
-    }
+   }
+   post{
+    always{
+        echo "reached end.."
+      }
+   }
 }
