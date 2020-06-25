@@ -23,5 +23,8 @@ pipeline {
     always{
         echo "reached end.."
       }
+    failure{
+      echo "this won't be displayed in console"
+      }
    }
 }
