@@ -26,5 +26,8 @@ pipeline {
     failure{
       echo "this won't be displayed in console"
       }
+     success{
+        echo "successfully executed..."
+      }
    }
 }
