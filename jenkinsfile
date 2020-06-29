@@ -2,6 +2,9 @@ pipeline {
   agent  any
     stages {
       stage("build"){
+        when{
+          env.BRANCH_NAME == 'br1'
+        }
         steps{
           echo "building the application..."
         }
