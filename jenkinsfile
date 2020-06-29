@@ -1,5 +1,8 @@
 pipeline {
   agent  any
+    environment{
+      VERSION_NUM = '1.0'
+    }
     stages {
       stage("build"){
         when{
@@ -8,25 +11,28 @@ pipeline {
            }
         }
         steps{
+          echo VERSION_NUM
           echo "building the application..."
         }
       }
 
        stage("test"){
         steps{
+          echo VERSION_NUM
           echo "testing the application..."
         }
       }
 
        stage("deploy"){
         steps{
+          echo VERSION_NUM
           echo "deploying the application..."
         }
       }
    }
    post{
     always{
-        echo "reached end.."
+        echo "reached end of version %echo VERSION_NUM%"
       }
     failure{
       echo "this won't be displayed in console"
